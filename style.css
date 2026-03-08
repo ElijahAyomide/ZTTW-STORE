@@ -209,11 +209,13 @@ body {
   }
 
   .left-img {
+    height: auto;
     width: 100%;
   }
 
   .hero-page {
     grid-template-columns: 1fr;
+    height: auto;
   }
 
   .hero-text {
@@ -234,12 +236,16 @@ body {
     display: block;
   }
 
-  .hero-page {
-    grid-template-columns: 1fr;
-    height: auto;
+  .right-img {
+    display: none;
   }
 
-  .right-img {
+  .left-img {
+    height: auto;
+    width: 100%;
+  }
+
+  .hero-page {
     grid-template-columns: 1fr;
     height: auto;
   }
@@ -251,4 +257,94 @@ body {
   .hero-text h1 {
     font-size: 2rem;
   }
+}
+
+.product-sect {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 2rem;
+    gap: 2rem;
+}
+
+@media(max-width: 1024px) {
+    .product-sect {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(max-width: 768px) {
+    .product-sect {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 624px) {
+    .product-sect {
+        grid-template-columns: 1fr;
+    }
+}
+
+.product {
+    width: 100%;
+    background: #fff;
+    object-fit: cover;
+    border-radius: .5rem;
+    transition: all 0.3s ease;
+    padding: .5rem;
+}
+
+@media(max-width: 1024px) {
+    .product {
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+}
+
+.product:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+.product-img {
+    height: 14rem;
+    width: 100%;
+}
+
+.product-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.product-text {
+    padding: 1rem .5rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.product-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0rem .5rem;
+}
+
+.product-price h4 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.product-price a {
+    display: inline-block;
+    padding: .5rem 1.1rem;
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    font-size: .9rem;
+    font-weight: 400;
+    border-radius: 5px;
+}
+
+.product-price a:hover {
+    background-color: #333;
+    transition: .3s ease;
 }
